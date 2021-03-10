@@ -9,11 +9,11 @@ RUN wget -q -O /etc/apk/keys/alpine@unified-streaming.com.rsa.pub \
   https://stable.apk.unified-streaming.com/alpine@unified-streaming.com.rsa.pub
 
 RUN apk --update \
-        --repository https://stable.apk.unified-streaming.com/alpine/v3.12 \
+        --repository https://beta.apk.unified-streaming.com/alpine/v3.12 \
         add \
-          mp4split=1.10.28-r0 \
-          mod_smooth_streaming=1.10.28-r0 \
-	        mod_unified_s3_auth=1.10.28-r0 \
+          mp4split=1.10.34-r0 \
+          mod_smooth_streaming=1.10.34-r0 \
+	        mod_unified_s3_auth=1.10.34-r0 \
  && rm -f /var/cache/apk/*
 
 RUN mkdir -p /run/apache2 \
